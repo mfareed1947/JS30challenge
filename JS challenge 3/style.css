@@ -1,0 +1,48 @@
+:root {
+    --base: #9ACD32;
+    --spacing: 10px;
+    --blur: 10px;
+}
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(5, 5, 53);
+    text-align: center;
+    color: white;
+    font-family: "helvetica neue", sans-serif;
+}
+
+
+.h1 {
+    color: var(--base);
+}
+
+h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+img {
+    margin-top: 100px;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    padding: var(--spacing);
+    filter: blur(var(--blur));
+    background: var(--base);
+
+}
+
+
+
+input {
+    width: 100px;
+}

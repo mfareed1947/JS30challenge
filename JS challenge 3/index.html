@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS30Challenge 3</title>
+    <link rel="stylesheet" href="././style.css">
+</head>
+
+<body>
+    <h2>Update CSS Variables with <span class="h1">JS</span></h2>
+
+    <div class="controls">
+        <label for="spacing">Spacing:</label>
+        <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px" />
+
+        <label for="blur">Blur:</label>
+        <input id="blur" type="range" name="blur" min="0" max="25" value="0" data-sizing="px" />
+
+        <label for="base">Base Color</label>
+        <input id="base" type="color" name="base" value="#9ACD32" />
+    </div>
+
+    <img src="./515152.jpg" alt="">
+
+</body>
+<script>
+
+    const inputs = document.querySelectorAll(".controls input")
+
+    function updateData() {
+        const suffix = this.dataset.sizing || "";
+        document.documentElement.style.setProperty(`--${this.name}`,this.value + suffix);
+    }
+
+
+    inputs.forEach((input) => input.addEventListener("change", updateData));
+    inputs.forEach((input) => input.addEventListener("mousemove", updateData))
+
+
+
+
+    // const inputs = document.querySelectorAll(".controls input");
+
+    //   function handleUpdate() {
+    //     const suffix = this.dataset.sizing || "";
+    //     document.documentElement.style.setProperty(
+    //       `--${this.name}`,
+    //       this.value + suffix
+    //     );
+    //   }
+
+    //   inputs.forEach((input) => input.addEventListener("change", handleUpdate));
+    //   inputs.forEach((input) =>input.addEventListener("mousemove", handleUpdate)
+    //   );
+    //   // inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+
+</script>
+
+</html>
